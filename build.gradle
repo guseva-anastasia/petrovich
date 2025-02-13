@@ -1,0 +1,65 @@
+plugins {
+    id 'java-library'
+    id 'io.qameta.allure' version '2.12.0'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.21'
+}
+
+repositories {
+    mavenCentral()
+}
+
+allure {
+    report {
+        version.set("2.32.0") //версия Allure Report (https://github.com/allure-framework/allure2)
+    }
+    adapter {
+        aspectjWeaver.set(true) // обработка аннотации @Step
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.29.1") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
+            }
+        }
+    }
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:7.0.0",
+            "org.junit.jupiter:junit-jupiter:5.10.0",
+            'org.slf4j:slf4j-simple:2.0.7',
+            'com.github.javafaker:javafaker:1.0.2',
+            "org.aeonbits.owner:owner:1.0.12",
+            'io.qameta.allure:allure-selenide:2.27.0'
+    )
+    runtimeOnly 'org.aspectj:aspectjweaver:1.9.22.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test){
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+//task petrovich(type:Test){
+//    useJUnitPlatform(){
+//        includeTags("petrovich_tests")
+//    }
+//}
+
+test {
+    useJUnitPlatform {
+        if (project.hasProperty("includeTags")) {
+            includeTags(project.property("includeTags") as String)
+        }
+    }
+}
