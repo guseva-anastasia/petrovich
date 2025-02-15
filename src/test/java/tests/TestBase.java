@@ -36,8 +36,6 @@ public class TestBase {
               "enableVNC", true,
                "enableVideo", true
       ));
-      Configuration.remoteConnectionTimeout = 5000;
-      Configuration.remoteReadTimeout = 5000;
       Configuration.browserCapabilities = capabilities;
 
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
