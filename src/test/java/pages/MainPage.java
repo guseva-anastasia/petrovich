@@ -45,45 +45,52 @@ public class MainPage {
         return this;
     }
 
-
+    @Step("Ввод в поисковую строку")
     public MainPage inputInSearchBar (String productName){
         searchNotActive.click();
         searchInput.setValue(productName).pressEnter();
         return this;
     }
 
+    @Step("Поиск с помощью поисковой строки")
     public MainPage checkSearchUsingSearchBar (String productName){
         lowestSections.shouldHave(text(productName)).shouldBe(visible);
         productTitle.shouldHave(text(productName));
         return this;
     }
 
+    @Step("Добавить продукт в корзину")
     public MainPage addToCart (){
         productAddToCart.shouldBe(visible).scrollIntoView(false).click();
         return this;
     }
 
+    @Step("Перейти в корзину")
     public MainPage goToCart (){
         cartLink.click();
         return this;
     }
 
+    @Step("Проверить, что корзина не пуста")
     public MainPage checkCartNotEmpty (){
         emptyProductList.shouldNotBe(visible);
         return this;
     }
 
+    @Step("Проверить, что корзина пуста")
     public MainPage checkCartEmpty (){
         emptyProductList.shouldBe(visible);
         return this;
     }
 
+    @Step("Удалить всё из корзины")
     public MainPage deleteAllProductsFromCart (){
         $(byText("Удалить всё")).click();
         $(".cart-modal-buttons-row").$(byText("ДА")).click();
         return this;
     }
 
+    @Step("Добавить продукт с помощью корзины")
     public MainPage adProductFromCart (String productName){
         $(".fast-add-product-desktop").$(byText("Добавить товар")).click();
         searchProductField.setValue(productName);

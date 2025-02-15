@@ -16,8 +16,6 @@ ____
 
 * <a href="#allure">Allure отчет</a>
 
-* <a href="#allure-testops">Интеграция с Allure TestOps</a>
-
 * <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
 * <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
@@ -42,11 +40,11 @@ ____
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ____
-- ✓ *Проверка работы Поп-апа Меню*
-- ✓ *Проверка работы Поп-апа Каталог*
-- ✓ *Проверка перехода на страницу рецептов*
-- ✓ *Проверка перехода на страницу Корзины*
-- ✓ *Проверка перехода на страницу вакансий*
+- ✓ *Проверка работы поисковой строки*
+- ✓ *Проверка добавления продукта с главной страницы в корзину*
+- ✓ *Проверка добавления продукта с помощью корзины*
+- ✓ *Проверка удаления всех продуктов из корзины*
+- ✓ *Проверка всех категорий каталога продуктов*
 
 
 
@@ -55,7 +53,7 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/HW14-VkusVill/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/HW14-VkusVill/"><img src="images/screen/vkusvill_jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/petrovich-vacancy/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
@@ -64,7 +62,7 @@ ____
 - *BROWSER (браузер, по умолчанию chrome)*
 - *VERSION (версия браузера, по умолчанию 126)*
 - *SIZE (размер окна браузера, по умолчанию 1920x1080)*
-- *REMOTEURL (адрес хоста для удалённого запуска тестов)*
+- *SELENOID HOST (адрес хоста для удалённого запуска тестов)*
 
 
 <a id="console"></a>
@@ -111,18 +109,7 @@ ___
 
 </p>
 
-___
-<a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4578/dashboards">Allure TestOps</a>
-____
-
-### *Авто тест-кейсы*
-
-<p align="center">  
-<img title="Allure TestOps Tests" src="images/screen/vkusvill_allure_autotestsN.png" width="850">  
-</p>
-
-____
+---
 <a id="telegram"></a>
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
