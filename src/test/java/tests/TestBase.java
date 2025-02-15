@@ -8,9 +8,15 @@ import config.CredentialsConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.ClientConfig;
 
+import java.time.Duration;
 import java.util.Map;
+
+import static java.time.Duration.ofMinutes;
 
 public class TestBase {
 
@@ -25,12 +31,12 @@ public class TestBase {
         Configuration.baseUrl = "https://petrovich.ru";
         Configuration.pageLoadStrategy = "eager";
       Configuration.remote = "https://"+ config.login() + ":" + config.password() + "@" + System.getProperty("remoteHost") + "/wd/hub";
-//
        DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setCapability("selenoid:options", Map .<String, Object>of(
               "enableVNC", true,
                "enableVideo", true
       ));
+      Configuration.remoteConnectionTimeout = 5000;
       Configuration.browserCapabilities = capabilities;
 
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
