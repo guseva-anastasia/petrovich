@@ -8,15 +8,9 @@ import config.CredentialsConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.http.ClientConfig;
 
-import java.time.Duration;
 import java.util.Map;
-
-import static java.time.Duration.ofMinutes;
 
 public class TestBase {
 

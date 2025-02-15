@@ -72,7 +72,7 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean petrovich_tests
+gradle clean petrovich
 ```
 ```bash  
 gradle clean test
@@ -82,10 +82,10 @@ gradle clean test
 ```bash  
 clean 
 petrovich
-"-Dbrowser=${BROWSER}" 
-"-DbrowserSize=${SIZE}" 
-"-DbrowserVersion=${VERSION}" 
-"-DremoteUrl=${REMOTEURL}"
+"-Dbrowser=${BROWSER}"
+"-DbrowserVersion=${BROWSER_VERSION}"
+"-DbrowserSize=${BROWSER_SIZE}"
+"-DremoteHost=${SELENOID_HOST}"
 ```
 ___
 <a id="allure"></a>

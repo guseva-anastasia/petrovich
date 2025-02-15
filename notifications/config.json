@@ -3,15 +3,15 @@
     "project": "petrovich",
     "environment": "prod",
     "comment": "report",
-    "reportLink": "https://jenkins.autotests.cloud/job/petrovich-vacancy/1/",
+    "reportLink": "https://jenkins.autotests.cloud/job/petrovich-vacancy/16/",
     "language": "ru",
     "messenger": "telegram",
     "allureFolder": "allure-report",
     "enableChart": true
   },
   "telegram": {
-    "token": "7883035743:AAG2VwIs0rFvwaAb9HKAhEBDEMHJFKC03Hw",
-    "chat": "-4612815598",
+    "token": "7678570461:AAHA0Geuobwh1AjxfaLjSGU7L3mO-BNSwtE",
+    "chat": "-4759837697",
     "replyTo": ""
   }
 }
