@@ -50,11 +50,11 @@ tasks.withType(Test){
     }
 }
 
-//task petrovich(type:Test){
-//    useJUnitPlatform(){
-//        includeTags("petrovich_tests")
-//    }
-//}
+task petrovich(type:Test){
+   useJUnitPlatform(){
+        includeTags("petrovich_tests")
+    }
+}
 
 test {
     useJUnitPlatform {
