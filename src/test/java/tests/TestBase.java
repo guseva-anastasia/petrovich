@@ -37,6 +37,7 @@ public class TestBase {
                "enableVideo", true
       ));
       Configuration.remoteConnectionTimeout = 5000;
+      Configuration.remoteReadTimeout = 5000;
       Configuration.browserCapabilities = capabilities;
 
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -45,7 +46,6 @@ public class TestBase {
    @BeforeEach
    void addListener(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.remoteReadTimeout = 5000;
     }
 
     @AfterEach
