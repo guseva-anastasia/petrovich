@@ -23,12 +23,12 @@ public class MainPage {
             emptyProductList = $(".empty-product-list"),
             searchProductField = $("[data-test=search-product-field]"),
             closeModalButton = $("[data-test=close-modal-btn]"),
-            ecosystemSection = $(".ecosystem-section");
+            mainPageBanner = $(".main-page-banner");
 
     @Step("Открыть главную страницу")
     public MainPage openPage() {
         open("/");
-        ecosystemSection.shouldBe(visible);
+        mainPageBanner.shouldBe(visible);
           return this;
     }
 
