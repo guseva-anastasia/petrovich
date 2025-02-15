@@ -24,7 +24,6 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.baseUrl = "https://petrovich.ru";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
        Configuration.remote = "https://"+ config.login() + ":" + config.password() + "@" + System.getProperty("remoteHost") + "/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
