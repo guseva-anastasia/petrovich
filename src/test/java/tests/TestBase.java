@@ -44,6 +44,7 @@ public class TestBase {
    @BeforeEach
    void addListener(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+       Configuration.remoteReadTimeout = 5000;
     }
 
     @AfterEach

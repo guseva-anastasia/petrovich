@@ -45,13 +45,6 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверить подкатегории каталога")
-    public MainPage checkSubcategories (Categories categories, List<String> subcategories) {
-        $$(".sections-list-link-inner ").findBy(partialText(categories.description)).shouldBe(visible).hover();
-        $$(".subsection").shouldHave(texts(subcategories));
-
-        return this;
-    }
 
     public MainPage inputInSearchBar (String productName){
         searchNotActive.click();
