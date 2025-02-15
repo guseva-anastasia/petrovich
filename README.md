@@ -93,19 +93,19 @@ ___
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/vkusvill_jenkins.png" width="850">  
+<img title="Allure Overview Dashboard" src="images/screen/allure_report.png" width="850">  
 </p>  
 
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/vkusvill_jenkins_tests.png" width="850">  
+<img title="Allure Tests" src="images/screen/allure_tests.png" width="850">  
 </p>
 
 ### *Графики*
 
   <p align="center">  
-<img title="Allure Graphics" src="images/screen/vkusvill_allure_graphs.png" width="850">
+<img title="Allure Graphics" src="images/screen/allure_graphs.png" width="850">
 
 </p>
 
@@ -114,7 +114,7 @@ ___
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/vkusvill_telegram.png" width="550">  
+<img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
 </p>
 
 ____
@@ -122,6 +122,6 @@ ____
 ## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
 ____
 <p align="center">
-<img title="Selenoid Video" src="images/video/vid.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="images/video/video.gif.gif" width="850" height="650"  alt="video">   
 </p>
 
