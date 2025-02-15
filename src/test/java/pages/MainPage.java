@@ -10,7 +10,6 @@ import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class MainPage {
 
@@ -23,19 +22,14 @@ public class MainPage {
             cartLink = $("[data-test=cart-link]"),
             emptyProductList = $(".empty-product-list"),
             searchProductField = $("[data-test=search-product-field]"),
-            closeModalButton = $("[data-test=close-modal-btn]");
+            closeModalButton = $("[data-test=close-modal-btn]"),
+            ecosystemSection = $(".ecosystem-section");
 
     @Step("Открыть главную страницу")
-    public MainPage openPage()  {
-    open("/");
+    public MainPage openPage() {
+        open("/");
+        ecosystemSection.shouldBe(visible);
           return this;
-    }
-
-    @Step("Удалить баннеры")
-    public MainPage removeBanner() {
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
-        return this;
     }
 
     @Step("Раскрыть каталог")
