@@ -14,7 +14,6 @@ import java.util.Map;
 
 public class TestBase {
 
-    public static final String TEXTBOX = "/text-box";
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll

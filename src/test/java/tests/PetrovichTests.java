@@ -8,12 +8,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
+import pages.CartPage;
 import pages.MainPage;
 
 
 public class PetrovichTests extends TestBase{
 
     MainPage mainPage = new MainPage();
+    CartPage cartPage = new CartPage();
     TestData testData = new TestData();
 
     @Tag("petrovich_tests")
@@ -30,8 +32,8 @@ public class PetrovichTests extends TestBase{
     @DisplayName("Проверить добавление продукта с главной страницы в корзину")
     void checkAddProductToCartFromMainPageTest(){
         mainPage.openPage()
-                .addToCart()
-                .goToCart()
+                .addToCart();
+        cartPage.goToCart()
                 .checkCartNotEmpty();
     }
 
@@ -39,8 +41,8 @@ public class PetrovichTests extends TestBase{
     @Test
     @DisplayName("Проверить добавление продукта с помощью корзины")
     void checkAddProductFromCartTest(){
-        mainPage.openPage()
-                .goToCart()
+        mainPage.openPage();
+        cartPage.goToCart()
                 .adProductFromCart(testData.productName)
                 .checkCartNotEmpty();
     }
@@ -50,8 +52,8 @@ public class PetrovichTests extends TestBase{
     @DisplayName("Проверить удаление всех продуктов из корзины")
     void checkDeleteAllProductsFromCartTest(){
         mainPage.openPage()
-                .addToCart()
-                .goToCart()
+                .addToCart();
+        cartPage.goToCart()
                 .checkCartNotEmpty()
                 .deleteAllProductsFromCart()
                 .checkCartEmpty();
