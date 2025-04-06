@@ -56,7 +56,7 @@ public class PetrovichTests extends TestBase{
                 .addToCart();
         cartPage.goToCart()
                 .checkCartNotEmpty()
-                .deleteAllProductsFromCart()
+                .deleteProductFromCart()
                 .checkCartEmpty();
     }
 

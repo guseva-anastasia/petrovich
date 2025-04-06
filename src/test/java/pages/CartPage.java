@@ -33,9 +33,9 @@ public class CartPage {
         return this;
     }
 
-    @Step("Удалить всё из корзины")
-    public CartPage deleteAllProductsFromCart (){
-        $(".data-test-deleteCallback").click();
+    @Step("Удалить товар из корзины")
+    public CartPage deleteProductFromCart (){
+        $("[data-test=data-test-deleteCallback]").click();
         return this;
     }
 
