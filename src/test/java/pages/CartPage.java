@@ -35,8 +35,7 @@ public class CartPage {
 
     @Step("Удалить всё из корзины")
     public CartPage deleteAllProductsFromCart (){
-        $(byText("Удалить всё")).click();
-        $(".cart-modal-buttons-row").$(byText("ДА")).click();
+        $(".data-test-deleteCallback").click();
         return this;
     }
 
