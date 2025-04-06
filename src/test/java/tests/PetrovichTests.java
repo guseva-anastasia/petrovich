@@ -4,6 +4,7 @@ import helpers.TestData;
 import models.Categories;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -18,7 +19,7 @@ public class PetrovichTests extends TestBase{
     CartPage cartPage = new CartPage();
     TestData testData = new TestData();
 
-    @Tag("petrovich_tests")
+    @Tags({@Tag("Medium"), @Tag("web"),@Tag("petrovich_tests")})
     @Test
     @DisplayName("Проверить работу поисковой строки")
     void checkSearchBarTest(){
@@ -27,7 +28,7 @@ public class PetrovichTests extends TestBase{
                 .checkSearchUsingSearchBar(testData.productName);
     }
 
-    @Tag("petrovich_tests")
+    @Tags({@Tag("High"), @Tag("web"),@Tag("petrovich_tests")})
     @Test
     @DisplayName("Проверить добавление продукта с главной страницы в корзину")
     void checkAddProductToCartFromMainPageTest(){
@@ -37,7 +38,7 @@ public class PetrovichTests extends TestBase{
                 .checkCartNotEmpty();
     }
 
-    @Tag("petrovich_tests")
+    @Tags({@Tag("Medium"), @Tag("web"),@Tag("petrovich_tests")})
     @Test
     @DisplayName("Проверить добавление продукта с помощью корзины")
     void checkAddProductFromCartTest(){
@@ -47,7 +48,7 @@ public class PetrovichTests extends TestBase{
                 .checkCartNotEmpty();
     }
 
-    @Tag("petrovich_tests")
+    @Tags({@Tag("High"), @Tag("web"),@Tag("petrovich_tests")})
     @Test
     @DisplayName("Проверить удаление всех продуктов из корзины")
     void checkDeleteAllProductsFromCartTest(){
@@ -59,7 +60,7 @@ public class PetrovichTests extends TestBase{
                 .checkCartEmpty();
     }
 
-    @Tag("petrovich_tests")
+    @Tags({@Tag("Low"), @Tag("web"),@Tag("petrovich_tests")})
     @DisplayName("Проверить элементы каталога продуктов")
     @ParameterizedTest()
     @EnumSource
